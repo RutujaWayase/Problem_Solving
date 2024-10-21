@@ -38,6 +38,7 @@ public class insertStringIntoAnotherString {
 }
 */
 //Using String.substring() method
+/* 
 public class insertStringIntoAnotherString {
     //function to insert string
     public static String insertString(
@@ -66,4 +67,33 @@ public class insertStringIntoAnotherString {
         System.out.println("Modified string: "+insertString(originalString, stringToBeInserted, index));
     }
     
+}
+*/
+
+//Using StringBuffer.insert()
+public class insertStringIntoAnotherString {
+    public static String insertString(String originalString, String stringToBeInserted, int index){
+        //Create a new StringBuffer
+        StringBuffer newString = new StringBuffer(originalString);
+        //Insert the strings to be inserted
+        //using insert() method
+        newString.insert(index+1, stringToBeInserted);
+        //return the modified string
+        return newString.toString();
+
+    }
+    public static void main(String[] args){
+        String originalString = "GreeksGreeks";
+        String stringToBeInserted = "For";
+        int index = 4;
+        System.out.println("Original String: "+ originalString);
+        System.out.println("String To Be Inserted: "+ stringToBeInserted);
+        System.out.println("String to be inserted at index: "+index);
+
+        //Insert the string
+        System.out.println("Modified String: "+ insertString(originalString, stringToBeInserted, index));
+
+
+    }
+
 }
