@@ -5,3 +5,4 @@ CP
 String s = "Welcome to Home";
 char[] str = s.toCharArray(); //convert string to character array
 String s = new String(str); // to convert back charcter to string
+
